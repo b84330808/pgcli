@@ -12,6 +12,9 @@ Bug fixes:
 ----------
 * Fix the development setup instructions to activate the ``.venv`` directory
   created by ``uv venv``.
+* Fix a crash on Windows when connecting with ``service=...`` or ``PGSERVICE``
+  while neither ``PGSERVICEFILE`` nor ``PGSYSCONFDIR`` is set. The service file
+  is now read from ``%APPDATA%\postgresql\.pg_service.conf``, as libpq does.
 
 4.7.1 (2026-09-20)
 ==================
